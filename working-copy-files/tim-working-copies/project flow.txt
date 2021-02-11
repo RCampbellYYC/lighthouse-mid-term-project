@@ -1,0 +1,54 @@
+-eliminate 40%+ missing values
+-correlation btw x, cutoff of 80% 
+list with correlation value (coeff)
+pca if more than 50-60 feat
+-keep track of eigenvalues
+
+if var explained not high, remove the correlation cutoff and just do pca
+
+create baseline model - compare different models
+accuracies for reference point - dont check hyperparameter
+check for imbalance in data (bootstrap, smote)
+also compare with and without pca
+choose alg with highest acc
+
+create approach tree, compare diff libraries, different methods
+create multiple df -> with scaling, w encoding, etc
+
+permutation combinations
+
+get highest training acc as high as possible
+use cross validation (k fold never higher than 25)
+p values, mcfadden values
+run same code again and again with train test split
+
+-> process restart with chosen model
+
+looking for highest training acc
+eg log reg, checking information value, classify var where importance is higher
+eg age variable - keep as numeric, create bins, then try to check performance (bin good for ages)
+
+if scaling not working try log normalization (boxcox)
+
+high acc - declare final model
+
+high accuracy -> final model, start to run test data to create pred
+start to run test data to create pred, check preds
+3 types of error
+-overfit - check features eng and # of columns
+-optimization - not optimized accurately, train model better
+-approx - alg could be wrong even with good acc -> use 2nd highest acc model
+	-run everything with 2nd highest acc
+
+
+learning rate 0.03 good start, 0.3 ceiling
+
+
+
+github
+https://medium.com/@jonathanmines/the-ultimate-github-collaboration-guide-df816e98fb67
+https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6
+https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
+https://www.youtube.com/watch?v=ev_byvSWvr0
+
+
