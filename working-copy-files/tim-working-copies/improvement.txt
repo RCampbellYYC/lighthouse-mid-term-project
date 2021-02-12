@@ -1,0 +1,14 @@
+ways to improve model 
+
+-more weather data
+   	-wind speed
+	-air density
+	-temperature?? (too hot??)
+
+-use all data - try iterative training using pickles
+-xgb_model (file name of stored xgb model or 'Booster' instance) – 
+Xgb model to be loaded before training (allows training continuation).
+-rf -> warm_start
+    
+-efficiency 
+   	-pipelines
