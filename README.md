@@ -86,7 +86,7 @@ Predict arrival delays of commercial flights.
 * For the final classifier selected, the team circled back to an earlier classifier model that was balanced.
 <br />
 
-**Modelling – Regressor (Tim)**
+**Modelling – Regressor**
 * Base regressor models were created
 * Engineered features were added based on the most important ones from the feature importance and selection work.
 * A rolling 30-day **arr_delay** average was used to try to smooth the noisy target variable to improve the regressor performance.
