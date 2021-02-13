@@ -94,5 +94,5 @@ Predict arrival delays of commercial flights.
 <br />
 
 **Predicting on flights_test Dataset**
-* A final classifier model was used to predict delay and no delay based on the flights_test dataset. It was found to be a marginal regressor and the results from it were not directly used. A cutoff of zero was used to define delay and no delay.
+* A final classifier model was used to predict delay and no delay based on the flights_test dataset. It was found to be a marginal classifier and the results from it were not directly used. A cutoff of zero was used to define delay and no delay.
 * A final regressor model using a rolling average approach was used to predict the delays that were submitted.
