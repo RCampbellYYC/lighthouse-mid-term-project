@@ -27,7 +27,7 @@ Predict arrival delays of commercial flights.
 
 **Directories**
 * **Final-files:** Copies of the final project files.
-* **Working-copies-files:** Working file copies for each group member
+* **Working-copies-files:** Working file copies for each group member.
 
 <br />
 
@@ -36,7 +36,7 @@ Predict arrival delays of commercial flights.
 **Data Selection**
 * The ~15MM row flights data table was too large to handle on desktop PC’s
 * Subsamples were taken for analysis and modelling
-* Subsamples were randomly selected for data with flights delays and no flights delays to ensure a balance dataset.
+* Subsamples were randomly selected for flights with delays and no delays to ensure a balanced dataset.
 * An **arr_delay** cutoff of zero was used for delay and no delay.
 * Two sub samples were used:
   * **Subsample #1:** 600,000 samples used for initial modelling
@@ -46,7 +46,7 @@ Predict arrival delays of commercial flights.
 
 **Data Exploration Tasks**
 * Tasks were divided between team members
-* There are a couple notebooks for the exploratory tasks.
+* There are a couple of notebooks for the exploratory tasks.
 
 <br />
 
@@ -57,7 +57,7 @@ Predict arrival delays of commercial flights.
 <br />
 
 **Data Exploration**
-* There are a few different data exploration notebooks for each team member exploration
+* There are a few different data exploration notebooks for each team members exploration
 * The approach was to generally look at the whole dataset and the data tables were divided amongst team member to be looked into.
 <br />
 
@@ -72,23 +72,23 @@ Predict arrival delays of commercial flights.
 * Features were added and removed from the models in an iterative process to narrow in on the most important features.
 * Feature importance with XGB and RF was used to rank features and help with feature selection.
 * PCA was explored as a dimensionality reduction option.
-* Both label encoding and dummy variable creation were explored for categorical variables.
+* Both label encoding and dummy variable creation (one-hot encoding) were explored for categorical variables.
 <br />
 
 **Modelling – Classifier**
-* Initially tried base regressor models, but encountered poor performance with noisy target variable
-* Change direction and moved to classifier models
+* Initially tried base regressor models, but encountered poor performance with noisy target variable arr_delay.
+* Change direction and moved to classifier models.
 * Created a number of different base classifier models.
 * Base classifier results were poor.
 * Iterated to improve base classifier model performance adding engineered features and other features from the data tables.
-* Improved classifier metrics to a point, although the models then started to become unbalanced (Ex: would overpredict delays).
+* Improved classifier model performance to a point, but then the models became unbalanced adding new engineered features (Ex: would overpredict delays).
 * The team found the XGBoost model to have the best balance of performance and computational efficiency and therefore this was the main model used in the model runs.
-* For the final classifier selected, the team circled back to an earlier classifier model that was balanced.
+* For the final classifier, the team circled back to an earlier classifier model that was balanced.
 <br />
 
 **Modelling – Regressor**
 * Base regressor models were created
-* Engineered features were added based on the most important ones from the feature importance and selection work.
+* Engineered features were added based on the results from the feature importance and selection work.
 * A rolling 30-day **arr_delay** average was used to try to smooth the noisy target variable to improve the regressor performance.
 * The final R^2 value was ~0.6, although it should be noted that the regressor predicts a rolling average value.
 <br />
